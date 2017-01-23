@@ -5,4 +5,14 @@
     {{capitalize model.planet.name}}
   {{/link-to}}
 </p>
+<p>Heroes:</p>
+<ul>
+  {{#each model.heroes as |hero|}}
+    <li>
+      {{#link-to 'heroes.hero' hero}}
+        {{capitalize hero.name}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
 {{#link-to 'races'}}Back to all races {{/link-to}}

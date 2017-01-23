@@ -1,0 +1,10 @@
+<p>All Heroes</p>
+
+{{#each model as |hero|}}
+  <h4>
+    {{#link-to 'heroes.hero' hero}}
+    {{capitalize hero.name}}
+    {{/link-to}}
+  </h4>
+  <p>{{hero.description}}</p>
+{{/each}}
