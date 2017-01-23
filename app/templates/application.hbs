@@ -1,0 +1,22 @@
+<header class="row">
+  <div class="container">
+    <span class="col col-6 logo">{{#link-to 'index'}}Starcraft Ember{{/link-to}}</span>
+    <nav class="col col-6 right">
+      {{#link-to 'races'}}Races{{/link-to}} |
+      {{#link-to 'planets'}}Planets{{/link-to}} |
+      {{#link-to 'heroes'}}Heroes{{/link-to}}
+    </nav>
+  </div>
+</header>
+
+<main class="sticky-footer">
+  <div class="container col col-12">
+  {{outlet}}
+  </div>
+</main>
+
+<footer>
+  <div class="row container">
+  <p>Howie Burger &copy; 2017</p>
+  </div>
+</footer>
