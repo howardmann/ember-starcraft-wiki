@@ -1,2 +1,10 @@
 <h3>Planets</h3>
-{{outlet}}
+
+{{#each model as |planet|}}
+<h4>
+  {{#link-to 'planet' planet}}
+    {{capitalize planet.name}}
+  {{/link-to}}
+</h4>
+<p>{{planet.description}}</p>
+{{/each}}

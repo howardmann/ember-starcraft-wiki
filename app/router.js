@@ -8,15 +8,11 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('races');
-  this.route('race', {
-    path: '/races/:race_id'
-  });
+  this.route('race', {path: 'races/:race_id'});
 
-  this.route('planets', function() {
-    this.route('planet', {
-      path: ':planet_id'
-    });
-  });
+  this.route('planets');
+  this.route('planet', {path: 'planets/:planet_id'});
+
   this.route('heroes', function() {
     this.route('hero', {
       path: ':hero_id'

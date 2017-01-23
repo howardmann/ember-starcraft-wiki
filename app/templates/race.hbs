@@ -1,4 +1,8 @@
 <h3>{{capitalize model.name}}</h3>
 <p>{{model.description}}</p>
-
+<p>Planet:
+  {{#link-to 'planet' model.planet}}
+    {{capitalize model.planet.name}}
+  {{/link-to}}
+</p>
 {{#link-to 'races'}}Back to all races {{/link-to}}
