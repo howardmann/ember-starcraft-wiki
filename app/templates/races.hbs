@@ -1,2 +1,10 @@
 <h3>Races</h3>
-{{outlet}}
+
+{{#each model as |race|}}
+<h4>
+  {{#link-to 'race' race}}
+    {{capitalize race.name}}
+  {{/link-to}}
+</h4>
+<p>{{race.description}}</p>
+{{/each}}

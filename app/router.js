@@ -7,11 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('races', function() {
-    this.route('race', {
-      path: ':race_id'
-    });
+  this.route('races');
+  this.route('race', {
+    path: '/races/:race_id'
   });
+
   this.route('planets', function() {
     this.route('planet', {
       path: ':planet_id'
