@@ -1,5 +1,9 @@
 <p>All Heroes</p>
 
+{{#link-to 'heroes.new'}}
+<p>Add new hero</p>
+{{/link-to}}
+
 {{#each model as |hero|}}
   <h4>
     {{#link-to 'heroes.hero' hero}}

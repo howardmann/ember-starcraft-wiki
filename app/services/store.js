@@ -118,5 +118,15 @@ export default Ember.Service.extend({
   },
   getHero(id) {
     return this.getHeroes().findBy('id', id);
+  },
+  newHero(){
+    return Hero.create({
+    });
+  },
+  saveHero(hero){
+    heroes.pushObject(hero);
+    hero.race.get('heroes').pushObject(hero);
+    hero.race.planet.get('heroes').pushObject(hero);
+    hero.set('id', heroes.length);
   }
 });

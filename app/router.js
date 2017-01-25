@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('hero', {
       path: ':hero_id'
     });
+    this.route('new');
   });
 });
 
