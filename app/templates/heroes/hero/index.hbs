@@ -1,0 +1,14 @@
+<h3>{{capitalize model.name}}</h3>
+<p>{{model.description}}</p>
+<p>Race:
+  {{#link-to 'race' model.race}}
+    {{capitalize model.race.name}}
+  {{/link-to}}
+</p>
+<p>Attack: {{model.attack}}</p>
+<p>Health: {{model.health}}</p>
+<p>Score: {{model.score}}</p>
+{{#link-to 'heroes'}}Back to all heroes {{/link-to}}
+<hr>
+{{#link-to 'heroes.hero.edit' model}}Edit hero {{/link-to}}
+{{outlet}}

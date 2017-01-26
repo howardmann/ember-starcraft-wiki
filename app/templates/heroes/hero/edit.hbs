@@ -1,0 +1,31 @@
+<h3>Edit Hero: {{capitalize model.hero.name}}</h3>
+
+<form {{action 'updateHero' model.hero on='submit'}}>
+  <p>Name:</p>
+  {{input type="text" name="name" value=model.hero.name}}
+
+  <p>Description:</p>
+  {{textarea name="" value=model.hero.description rows="5" cols="50"}}
+
+  <p>Attack:</p>
+  {{input type="number" name="" value=model.hero.attack}}
+
+  <p>Health:</p>
+  {{input type="number" name="" value=model.hero.health}}
+
+  <p>Race:</p>
+  <select {{action 'onChange' model on='change'}}>
+    {{#each model.races as |race|}}
+      {{#if (eq model.hero.race.name race.name)}}
+        <option value={{race.name}} selected>{{race.name}}</option>
+      {{else}}
+        <option value={{race.name}}>{{race.name}}</option>
+      {{/if}}
+    {{/each}}
+  </select>
+  <p><input type="submit" value="Update"></p>
+</form>
+
+<hr>
+<p>{{#link-to 'heroes.hero' model.hero}}Back to hero{{/link-to}}</p>
+<a href="#" {{action 'destroyHero' model.hero}}>Destroy hero</a>

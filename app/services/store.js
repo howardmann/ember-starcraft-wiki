@@ -128,5 +128,9 @@ export default Ember.Service.extend({
     hero.race.get('heroes').pushObject(hero);
     hero.race.planet.get('heroes').pushObject(hero);
     hero.set('id', heroes.length);
+  },
+  deleteHero(hero){
+    var index = heroes.indexOf(hero);
+    heroes.splice(index,1);
   }
 });

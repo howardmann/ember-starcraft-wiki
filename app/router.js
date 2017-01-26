@@ -14,8 +14,8 @@ Router.map(function() {
   this.route('planet', {path: 'planets/:planet_id'});
 
   this.route('heroes', function() {
-    this.route('hero', {
-      path: ':hero_id'
+    this.route('hero', { path: ':hero_id' }, function() {
+      this.route('edit');
     });
     this.route('new');
   });
